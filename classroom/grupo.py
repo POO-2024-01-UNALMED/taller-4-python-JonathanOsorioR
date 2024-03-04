@@ -14,12 +14,12 @@ class Grupo:
 
     def agregarAlumno(self, alumno=None, lista=None):
 
-        if lista is None:
-            lista=[]
+        if lista is not None:
+            self.listadoAlumnos.extend(lista)
             
         if alumno is not None:
             self.listadoAlumnos.append(alumno)
-        self.listadoAlumnos.extend(lista)   
+          
 
     def __str__(self):
         return "Grupo de estudiantes: " + self._grupo
